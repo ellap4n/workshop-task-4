@@ -88,6 +88,8 @@ function clouds() {
 ### Coding User inputs 
 Now that I had all my image layers ready, I needed to code user inputs to change these components. I followed the workshop video for this step to create a selection dropdown for the season, and a toggle for the birds overhead. 
 
+the season changed both the colours of the sky and reflection of the sea. 
+
 ## Sky 
 This was extremely difficult - I wanted a gradient fill for the sky, but there was no function for this. 
 I assumed that transiton % could be coded for and I had planned to make this simply follow the position of the mouse so the colour would move up and down. 
@@ -139,3 +141,9 @@ So the next thing I tried was to change the code so the the image moved in _prop
 ySky = mouseY/2 -200;
 ```
 This worked very well and the image moved successfully without revealing the canvas behind in any position. 
+
+## Final Touches
+Finally I added some text as the 3rd user input is hidden, and the final result was quite similar to what I originally had in mind. =
+
+## Next Steps
+The next steps are of course to add more elements and detail. this workshop is definetly a bit more aesthetic focused than some others, so adding more user inputs could mean that people can use this website to 'create' their own little paradise. 
