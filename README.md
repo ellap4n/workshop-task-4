@@ -63,6 +63,28 @@ initially the birds were generated everywhere within the sky area, however becau
 I also limited the area where the birds would appear in relation to bird 1 - as before, they were scattered in a blob which is quite unusual as birds flock and follow a leader. 
 The limit meant the birds always appeared in a rough diagonal line for aesthetic purposes. 
 
+#### Clouds 
+I had a pretty clear idea of how to create clouds from the get go - creating a central ellipse then generating extra smaller clouds aound it. 
+This idea ran into no problems so was pretty straightforward
+
+```
+function clouds() {
+  noStroke();
+  fill(255);
+  for(t = 0; t <=3; t++) {
+    tX = random(0,400);
+    tY = random(50,230);
+    ellipse(tX, tY, 70, 50);
+    ellipse(tX + random(10, 50), tY + random(5, 15), random(50, 70), random(30, 65));
+    ellipse(tX + random(10, 50), tY - random(5, 15), random(50, 70), random(30, 65));
+    ellipse(tX - random(10, 50), tY - random(5, 15), random(50, 70), random(30, 65));
+    ellipse(tX - random(10, 50), tY + random(5, 15), random(40, 60), random(20, 30));
+    ellipse(tX - random(10, 50), tY, random(60, 80), random(20, 40));
+    ellipse(tX + random(10, 50), tY + random(5, 15), random(40, 60), random(20, 30));
+    ellipse(tX - random(10, 50), tY, random(60, 80), random(20, 40));
+    
+  }
+  ```
 ### Coding User inputs 
 Now that I had all my image layers ready, I needed to code user inputs to change these components. I followed the workshop video for this step to create a selection dropdown for the season, and a toggle for the birds overhead. 
 
